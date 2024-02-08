@@ -1,0 +1,541 @@
+/* External resources */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+
+/* @font-face definitions */
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Trebuchet MS"), url("../assets/fonts/trebuc.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Trebuchet MS Italic";
+  font-style: norm;
+  font-weight: normal;
+  src: local("Trebuchet MS Italic"),
+    url("../assets/fonts/Trebuchet-MS-Italic.woff") format("woff");
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+html,
+body {
+  overflow: auto;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+/* Component and layout styles */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.intibiome-header {
+  border-bottom: 1px solid #e2e8f0;
+  opacity: 1;
+}
+
+.intibiome-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.intibiome-header-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intibiome-bar {
+  border-radius: 20px;
+  display: block;
+  width: 16px;
+  height: 3px;
+  margin: 4px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #707070;
+}
+
+.intibiome-nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.intibiome-nav-menu.nav-mobile {
+  display: none;
+}
+
+.intibiome-nav-item {
+  margin-right: 7rem;
+}
+
+.intibiome-nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.32px;
+  text-decoration: none;
+}
+
+.intibiome-primary-navbar,
+.intibiome-secondary-navbar {
+  background-color: #389cd6;
+  padding: 2px 0px;
+}
+
+.intibiome-secondary-navbar {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  background-color: #9d8e8e;
+}
+
+.intiome-sub-navbar {
+  justify-content: flex-start;
+}
+
+.nav-link-icon {
+  display: inline-block;
+  transform: translateY(1px);
+}
+
+.search-icon {
+  display: inline-block;
+  font-size: 20px;
+  transform: scaleX(-1);
+  color: #707070;
+  cursor: pointer;
+}
+
+.intibiome-header-hamburger {
+  display: none;
+}
+
+.intibiome-header-logo img {
+  width: 200px;
+}
+
+.banner-hero-full {
+  display: block;
+}
+
+.banner-hero-mobile {
+  display: none;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-scrollable {
+    display: inline-block;
+  }
+}
+
+.card-scrollable {
+  width: 380px;
+  margin: 5px 10px;
+}
+
+.intibiome-product-content {
+  cursor: pointer;
+  box-shadow: 0px 3px 16px #00000014;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 0px 16px 16px 16px;
+  text-align: center;
+}
+
+.intibiome-product-content img {
+  width: 100%;
+  height: auto;
+}
+
+.intibiome-product-content p {
+  white-space: normal;
+  margin-top: 24px;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  color: #7b7070;
+}
+
+.intibiome-discoveries-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.intibiome-discoveries-section button {
+  padding: 16px;
+  font-size: 20px;
+  background-color: #389cd6;
+  color: #fff;
+  width: 350px;
+  border-radius: 10px;
+  border: none;
+  margin: 6rem 0rem;
+}
+
+.intibiome-discovery-content {
+  box-shadow: 0px 3px 16px #00000014;
+  border-radius: 16px;
+}
+
+.intibiome-discovery-content div {
+  padding: 16px 16px 30px 16px;
+}
+
+.intibiome-description-first-text {
+  display: flex;
+  align-items: center;
+  color: #7b7070;
+  flex-direction: column;
+}
+
+.intibiome-description-first-text p {
+  font-family: "Trebuchet MS";
+  max-width: 500px;
+  font-size: 19px;
+  margin-bottom: 16px !important;
+  text-align: center;
+}
+
+.intibiome-description-second-text {
+  display: flex;
+  align-items: center;
+  color: #7b7070;
+  flex-direction: column;
+}
+
+.intibiome-description-second-text p {
+  font-family: "Trebuchet MS";
+  max-width: 744px;
+  font-size: 19px;
+  margin-bottom: 16px !important;
+  text-align: center;
+}
+
+.intibiome-discovery-content p {
+  font-size: 20px;
+  white-space: normal;
+  text-align: center;
+  color: #7b7070;
+}
+
+.intibiome-product-bottom-content {
+  cursor: default;
+  padding: 16px;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+}
+
+.intibiome-product-bottom-primary {
+  background-color: #389cd6;
+}
+
+.intibiome-product-bottom-success {
+  background-color: #309d5f;
+}
+
+.intibiome-product-bottom-error {
+  background-color: #ee6381;
+}
+
+.intibiome-product-bottom-content p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.intibiome-product-section {
+  margin: 7.5rem;
+}
+
+.intibiome-footer-nav-items div {
+  display: flex;
+  justify-content: center;
+}
+
+.intibiome-footer-content p {
+  cursor: pointer;
+  padding: 0px 30px;
+  border-right: 2px solid #fff;
+}
+
+.intibiome-footer-content p:last-child {
+  border-right: none;
+}
+
+.intibiome-footer-content a {
+  font-size: 18px;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.title-section {
+  text-align: center;
+  color: #389cd6;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+.title-section h2 {
+  font-size: 39px;
+  text-align: center;
+  max-width: 744px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intibiome-footer-nav-items-social div {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intibiome-footer-nav-items-social img {
+  cursor: pointer;
+  width: 116px;
+  height: 29px;
+}
+
+.intibiome-footer-nav-items-social i {
+  cursor: pointer;
+  font-size: 42px;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .scrolling-wrapper {
+    display: block;
+  }
+
+  .card-scrollable {
+    margin: 5px 3px !important;
+  }
+
+  .banner-hero-full {
+    display: none;
+  }
+
+  .banner-hero-mobile {
+    display: block;
+  }
+
+  .title-section h2 {
+    max-width: 350px;
+    font-size: 31px;
+  }
+  .intibiome-description-second-text {
+    text-align: center;
+  }
+
+  .intibiome-description-second-text p {
+    text-align: center;
+  }
+
+  .intibiome-description-section img {
+    font-family: "Trebuchet MS";
+    margin: 4rem 0px;
+  }
+
+  .intibiome-invisible-div {
+    display: none;
+  }
+
+  .intibiome-header-elements {
+    padding: 10px 30px !important;
+  }
+
+  .intibiome- .intibiome-navbar {
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .intibiome-header {
+    height: 100%;
+    box-shadow: 0px 4px 16px #00000014;
+  }
+
+  .intibiome-primary-navbar {
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .intibiome-navbar.main-navbar.container {
+    max-width: 100% !important;
+    padding: 0px !important;
+  }
+
+  .intibiome-primary-navbar.active {
+    display: block;
+    visibility: visible;
+    max-height: 100%;
+  }
+
+  .intibiome-primary-navbar,
+  .intibiome-secondary-navbar {
+    background-color: #ffffff;
+  }
+
+  .intibiome-nav-menu {
+    background-color: #389cd6;
+    left: -100%;
+    top: 4rem;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s;
+    min-height: 100vh;
+  }
+
+  .intibiome-nav-menu.nav-mobile {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .intibiome-nav-menu.nav-mobile.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+    max-height: 100%;
+  }
+
+  .intibiome-header-logo img {
+    width: 143px;
+  }
+
+  .search-icon {
+    font-size: 16px !important;
+  }
+
+  .intibiome-nav-menu.nav-full-width {
+    display: none;
+  }
+
+  .intibiome-nav-menu.active {
+    display: block;
+  }
+
+  .intibiome-nav-item {
+    padding: 2.5rem 3rem;
+  }
+
+  .intibiome-nav-item:first-child {
+    margin-top: 3rem;
+  }
+
+  .nav-link-text {
+    font-size: 16px;
+  }
+
+  .intibiome-header-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .intibiome-header-hamburger.active .intibiome-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .intibiome-header-hamburger.active .intibiome-bar:nth-child(1),
+  .intibiome-header-hamburger.active .intibiome-bar:nth-child(3) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .intibiome-header-hamburger.active .intibiome-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .intibiome-footer-nav-items div {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .intibiome-footer-nav-items p {
+    border: none;
+  }
+
+  .intibiome-footer-nav-items p::after {
+    display: block;
+    content: "";
+    border-top: 2px solid #fff;
+    width: 30px;
+    height: 5px;
+    margin: 20px auto;
+  }
+
+  .intibiome-footer-nav-items p:last-child::after {
+    display: none;
+  }
+
+  .intibiome-footer-nav-items-social div {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+
+  .intibiome-footer-nav-items-social img {
+    margin-top: 8rem;
+  }
+}
